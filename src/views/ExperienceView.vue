@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>This is an about page</p>
+    <h1>EXP View</h1>
   </div>
 </template>
 
