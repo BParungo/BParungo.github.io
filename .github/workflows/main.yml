@@ -6,11 +6,6 @@ on:
   push:
     branches: [ main ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 # Specify the tasks to run when this script gets triggered
 jobs:
   build:
