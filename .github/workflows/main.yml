@@ -1,5 +1,5 @@
 # This script deploys your website automatically
-name: CI
+name: Run and Build
 
 # Only trigger this script when you push to the master branch
 on:
@@ -13,11 +13,19 @@ jobs:
 
     # Download our master branch
     steps:
-    - uses: actions/checkout@v2
-      
-    - name: build dist directory
-      run: npm run build
-      
-    # Run our deployment command
-    - name: Deploying the static website to gh-pages
-      run: git subtree push --prefix dist origin gh-pages
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Push
+        run: git subtree push --prefix dist origin gh-pages
