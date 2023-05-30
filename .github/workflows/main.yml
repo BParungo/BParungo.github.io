@@ -41,7 +41,9 @@ jobs:
 
       - name: Delete branch
         continue-on-error: true
-        run: git branch -D gh-pages
+        run: |
+          git fetch --all
+          git branch -D gh-pages
 
       - name: Push to sub
         continue-on-error: true
