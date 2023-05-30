@@ -37,5 +37,5 @@ jobs:
           git add .
           git commit -m "add Build"
           git push  
-          git subtree merge --prefix dist origin gh-pages
+          git branch -D gh-pages
           git subtree push --prefix dist origin gh-pages
