@@ -38,7 +38,9 @@ jobs:
           git commit -m "add Build"
           git push  
 
+      - name: Delete branch
+        run: git branch -D gh-pages
+
       - name: Push to sub
         run: |
-          git subtree merge --prefix dist origin gh-pages --squash
           git subtree push --prefix dist origin gh-pages
