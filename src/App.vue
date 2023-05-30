@@ -27,7 +27,7 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div id="appcontent">
+  <div id="app-content">
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
       <SideNavigation></SideNavigation>
@@ -40,7 +40,7 @@ onMounted(()=>{
 </template>
 
 <style scoped >
-#appcontent{
+#app-content{
   max-width: 1268px;;
   margin: 0 auto;
   padding: 5rem 2rem;
@@ -48,7 +48,7 @@ onMounted(()=>{
   gap: 3rem;
   grid-template-columns: 1fr 1fr;
 }
-#appcontent::before{
+#app-content::before{
   content: "";
   background: radial-gradient(circle farthest-side at center center, #ffffff 24%, var(--color-background) 35%, #9b9b9b 70%, transparent 90%);
   z-index: -1;

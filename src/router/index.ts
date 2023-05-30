@@ -5,6 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      alias: ['/portfolio'],
       name: 'about',
       component: () => import('../views/AboutView.vue')
     },
