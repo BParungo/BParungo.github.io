@@ -27,6 +27,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Git Setup
+        run: |
+          git config --global user.name "BParungo"
+          git config --global user.email "BParungo@users.noreply.github.com"
+
       - name: Push
         run: |
           git commit -m "add Build"
