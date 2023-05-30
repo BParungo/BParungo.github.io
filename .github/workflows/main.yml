@@ -32,9 +32,13 @@ jobs:
           git config --global user.name "BParungo"
           git config --global user.email "BParungo@users.noreply.github.com"
 
-      - name: Push
+      - name: Push to main
         run: |
           git add .
           git commit -m "add Build"
           git push  
+
+      - name: Push to sub
+        run: |
+          git subtree pull --prefix dist origin gh-pages --squash
           git subtree push --prefix dist origin gh-pages
