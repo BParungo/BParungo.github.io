@@ -33,14 +33,17 @@ jobs:
           git config --global user.email "BParungo@users.noreply.github.com"
 
       - name: Push to main
+        continue-on-error: true
         run: |
           git add .
           git commit -m "add Build"
           git push  
 
       - name: Delete branch
+        continue-on-error: true
         run: git branch -D gh-pages
 
       - name: Push to sub
+        continue-on-error: true
         run: |
           git subtree push --prefix dist origin gh-pages
