@@ -40,5 +40,5 @@ jobs:
 
       - name: Push to sub
         run: |
-          git subtree pull --prefix dist origin gh-pages --squash
+          git subtree merge --prefix dist origin gh-pages --squash
           git subtree push --prefix dist origin gh-pages

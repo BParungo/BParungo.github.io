@@ -30,7 +30,7 @@ onMounted(()=>{
   <div id="app-content">
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
-      testiasdaasdasdasasaaaaaaaaaaaaang
+      testiasdaasdasdasasaaadaaaaaaaaaang
       <SideNavigation></SideNavigation>
     </div>
     <div class="r-wrapper">
