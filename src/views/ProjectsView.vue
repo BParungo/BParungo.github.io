@@ -1,15 +1,19 @@
 <template>
   <div>
-    <p>This is an about page</p>
+    <h1>Projects View</h1>
   </div>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
     display: flex;
     align-items: center;
   }
+}
+div{
+  height: 300vh;
+  background-color: black;
 }
 </style>
