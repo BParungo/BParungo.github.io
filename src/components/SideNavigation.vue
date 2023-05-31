@@ -24,13 +24,17 @@ a{
   font-weight: 700;
   max-width: 218px;
 }
+a:hover{
+  transition: color 0.3s;
+  color: white;
+}
 a::before{
   content: "";
   background-color: var(--color-text);
   width: 8px;
   height: 2px;
   margin: auto 8px auto 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 a:hover::before,.router-link-active::before{
   content: "";
