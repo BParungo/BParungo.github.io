@@ -6,18 +6,21 @@ import {me} from './content';
 import FlashlightEffect from "@/components/FlashlightEffect.vue";
 import {onMounted} from "vue";
 
-const svgFiles = Object.keys(import.meta.glob('/icons/*.svg'));
+const svgFiles = Object.keys(import.meta.glob('@public/icons/*.svg'));
+const fileNames = svgFiles.map(str =>{
+  return str.replace("/public", "");
+})
 
 
 onMounted(()=>{
-  console.log(svgFiles);
+  console.log(fileNames);
 }) ;
 </script>
 
 <template>
   <div id="app-content">
     <flashlight-effect/>
-    <div v-for="src in svgFiles" >
+    <div v-for="src in fileNames" >
       {{src}}
       <img :src="src" :alt="src" style="height: 64px"/>
     </div>
