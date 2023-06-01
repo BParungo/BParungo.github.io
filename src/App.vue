@@ -24,10 +24,6 @@ onMounted(()=>{
       {{src}}
       <img :src="src" :alt="src" style="height: 64px"/>
     </div>
-    <div v-for="src in svgFiles" >
-      {{src}}
-      <img :src="src" :alt="src" style="height: 64px"/>
-    </div>
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
       <SideNavigation></SideNavigation>
