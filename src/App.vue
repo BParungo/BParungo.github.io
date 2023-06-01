@@ -4,17 +4,12 @@ import SideNavigation from './components/SideNavigation.vue';
 import IntroductionBlock from './components/IntroductionBlock.vue'
 import {me} from './content';
 import FlashlightEffect from "@/components/FlashlightEffect.vue";
-import {onMounted} from "vue";
+
 
 const svgFiles = Object.keys(import.meta.glob('/public/icons/*.svg'));
 const fileNames = svgFiles.map(str =>{
-  return str.replace("/public", "");
+  return str.replace("/public/", "");
 })
-
-
-onMounted(()=>{
-  console.log(fileNames);
-}) ;
 </script>
 
 <template>
