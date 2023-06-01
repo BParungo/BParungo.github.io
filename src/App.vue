@@ -6,19 +6,12 @@ import {me} from './content';
 import FlashlightEffect from "@/components/FlashlightEffect.vue";
 
 
-const svgFiles = Object.keys(import.meta.glob('/public/icons/*.svg'));
-const fileNames = svgFiles.map(str =>{
-  return str.replace("/public/", "");
-})
+
 </script>
 
 <template>
   <div id="app-content">
     <flashlight-effect/>
-    <div v-for="src in fileNames" >
-      {{src}}
-      <img :src="src" :alt="src" style="height: 64px"/>
-    </div>
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
       <SideNavigation></SideNavigation>

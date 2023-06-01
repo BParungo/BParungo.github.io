@@ -2,12 +2,15 @@
   const props = defineProps<{
     path:string;
   }>()
+
 </script>
 
 <template>
-  <img :src="props.path" :alt="props.path"/>
+  <img class="skill-icon" :src="props.path" :alt="props.path"/>
 </template>
 
 <style scoped>
-
+  .skill-icon{
+    height: 64px;
+  }
 </style>

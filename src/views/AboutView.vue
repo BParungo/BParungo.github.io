@@ -1,15 +1,13 @@
+<script setup>
+import IconContainer from "@/components/IconContainer.vue";
+</script>
 <template>
   <div>
     <p>This is an about page</p>
+    <IconContainer></IconContainer>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+
 </style>
