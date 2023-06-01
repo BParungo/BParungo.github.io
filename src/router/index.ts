@@ -4,9 +4,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      alias: ['/portfolio'],
+      path: '/portfolio',
       name: 'about',
+      alias:['/'],
       component: () => import('../views/AboutView.vue')
     },
     {

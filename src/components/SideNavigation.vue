@@ -4,10 +4,10 @@
 
 <template>
     <nav>
-      <RouterLink to="/">über mich</RouterLink>
-      <RouterLink to="/experience">Laufbahn</RouterLink>
-      <RouterLink to="/projects">Projekte</RouterLink>
-      <RouterLink to="/contact">Kontakt</RouterLink>
+      <RouterLink :to="{name:'about'}">über mich</RouterLink>
+      <RouterLink :to="{name:'experience'}">Laufbahn</RouterLink>
+      <RouterLink :to="{name:'projects'}">Projekte</RouterLink>
+      <RouterLink :to="{name:'contact'}">Kontakt</RouterLink>
     </nav>
 </template>
 
