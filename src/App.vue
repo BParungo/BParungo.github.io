@@ -15,9 +15,9 @@ console.log(svgFiles.value);
 <template>
   <div id="app-content">
     <flashlight-effect/>
-    <div v-for="svg in svgFiles">
+    <div v-for="svg in svgFiles" >
       {{svg}}
-      <img :src="svg" :alt="svg"/>
+      <img :src="svg" :alt="svg" style="height: 64px"/>
     </div>
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
