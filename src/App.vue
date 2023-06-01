@@ -6,7 +6,7 @@ import {me} from './content';
 import FlashlightEffect from "@/components/FlashlightEffect.vue";
 import {onMounted} from "vue";
 
-const svgFiles = Object.keys(import.meta.glob('@public/icons/*.svg'));
+const svgFiles = Object.keys(import.meta.glob('/public/icons/*.svg'));
 const fileNames = svgFiles.map(str =>{
   return str.replace("/public", "");
 })
