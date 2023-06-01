@@ -4,20 +4,25 @@ import SideNavigation from './components/SideNavigation.vue';
 import IntroductionBlock from './components/IntroductionBlock.vue'
 import {me} from './content';
 import FlashlightEffect from "@/components/FlashlightEffect.vue";
-import {onMounted, ref} from "vue";
-import Icons from "@/components/Icons.vue";
+import {onMounted} from "vue";
 
-const svgFiles = ref(Object.keys(import.meta.glob('/public/icons/*.svg')));
-console.log(svgFiles.value);
+const svgFiles = Object.keys(import.meta.glob('./assets/icons/*.svg'));
+const svgMetaPaths = svgFiles.map(path =>{
+  return new URL(path, import.meta.url).href;
+})
 
+
+onMounted(()=>{
+  console.log(svgMetaPaths);
+}) ;
 </script>
 
 <template>
   <div id="app-content">
     <flashlight-effect/>
-    <div v-for="svg in svgFiles" >
-      {{svg}}
-      <img :src="svg" :alt="svg" style="height: 64px"/>
+    <div v-for="src in svgMetaPaths" >
+      {{src}}
+      <img :src="src" :alt="src" style="height: 64px"/>
     </div>
     <div class="l-wrapper" >
       <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote"/>
