@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import IconContainer from "@/components/IconContainer.vue";
 </script>
 <template>
