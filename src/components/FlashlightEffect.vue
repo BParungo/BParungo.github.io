@@ -27,10 +27,10 @@ onMounted(()=>{
   position: fixed;
   top:0;
   left:0;
+  z-index: -1;
 }
 .flashlight-effect{
   background: radial-gradient(circle farthest-side at center center, #ffffff 24%, var(--color-background) 35%, #9b9b9b 70%, transparent 90%);
-  z-index: -1;
   width: 800px;
   height: 800px;
   opacity: .05;

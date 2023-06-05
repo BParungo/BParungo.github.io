@@ -3,7 +3,7 @@
   --accent:#2720C8;
   --color-background:#121b34;
   --color-text:#e3f6ffd6;
-  --accent2:#005A39;
+  --accent2:0, 90, 57;
   --color5:#009268;
 }
 
@@ -33,8 +33,17 @@ h1{
   font-size: 2.6rem;
 }
 h2{
+  font-weight: 200;
   font-size: 2rem;
+  white-space: pre-line;
 }
 h3{
+  font-weight: 600;
   font-size: 1.4rem;
 }
+
+.line{
+  height: 3px;
+  background: var(--accent);
+}
+
