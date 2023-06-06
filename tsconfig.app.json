@@ -10,7 +10,6 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "baseUrl": "./portfolio",
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -4,7 +4,7 @@
   --color-background:#121b34;
   --color-text:#e3f6ffd6;
   --accent2:0, 90, 57;
-  --color5:#009268;
+  --accent3:#009268;
 }
 
 *,
@@ -41,9 +41,3 @@ h3{
   font-weight: 600;
   font-size: 1.4rem;
 }
-
-.line{
-  height: 3px;
-  background: var(--accent);
-}
-
