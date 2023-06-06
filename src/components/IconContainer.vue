@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import Icon from '@/components/Icon.vue'
 import { ref } from 'vue'
-import { getSkillsDescription } from '@/content'
+import { skills } from '@/content'
 import type { skillItem } from '@/content'
 import ExternalLink from '@/components/ExternalLink.vue'
 import SeparationLine from '@/components/SeperationLine.vue'
 
-const svgFiles = Object.keys(import.meta.glob('/public/icons/*.{svg,png}'))
-const paths = svgFiles.map((str) => {
-  return str.replace('/public/', '')
-})
 enum card {
   overview = 1,
   detail = 2
@@ -17,9 +13,9 @@ enum card {
 const currentCard = ref(card.overview)
 const selectedSkillDetails = ref<skillItem>({} as skillItem)
 const selectedSkillPath = ref('')
-function goToDetails(content: string) {
-  selectedSkillPath.value = content
-  selectedSkillDetails.value = getSkillsDescription(content) ?? ({} as skillItem)
+function goToDetails(skill: skillItem) {
+  selectedSkillDetails.value = skill
+  selectedSkillPath.value = skill.filePath
   currentCard.value = card.detail
 }
 </script>
@@ -30,7 +26,12 @@ function goToDetails(content: string) {
   <div class="transition-container">
     <transition name="rotate">
       <div class="icon-container" v-if="currentCard === card.overview">
-        <Icon v-for="path in paths" :path="path" @click="goToDetails(path)" :key="path" />
+        <Icon
+          v-for="skill in skills"
+          :path="skill.filePath"
+          @click="goToDetails(skill)"
+          :key="skill.name"
+        />
       </div>
       <div
         class="icon-detail"
