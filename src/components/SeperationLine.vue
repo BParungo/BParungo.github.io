@@ -2,7 +2,9 @@
 defineProps<{
   h: string
   color: string
-  w?: string
+  w?: {
+    default: 'auto'
+  }
 }>()
 </script>
 
@@ -14,5 +16,6 @@ defineProps<{
 .line {
   height: v-bind(h);
   background: v-bind(color);
+  width: v-bind(w);
 }
 </style>

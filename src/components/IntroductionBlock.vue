@@ -1,8 +1,7 @@
 <script setup lang="ts">
 defineProps<{
-  title: string;
-  workAt: string;
-  quote: string;
+  title: string
+  workAt: string
 }>()
 </script>
 
@@ -11,15 +10,14 @@ defineProps<{
     <h1>Blaine Parungo</h1>
     <h2>{{ title }}</h2>
     <h3>{{ workAt }}</h3>
-    <p>{{ quote }}</p>
   </div>
 </template>
 
 <style scoped>
-h3{
+h3 {
   margin-top: 1rem;
 }
-p{
-  margin-top: 2rem;
+p {
+  margin-top: 3rem;
 }
 </style>

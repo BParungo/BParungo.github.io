@@ -2,10 +2,10 @@
 
 <template>
   <nav>
-    <RouterLink :to="{ name: 'about' }">über mich</RouterLink>
-    <RouterLink :to="{ name: 'experience' }">Laufbahn</RouterLink>
-    <RouterLink :to="{ name: 'projects' }">Projekte</RouterLink>
-    <RouterLink :to="{ name: 'contact' }">Kontakt</RouterLink>
+    <RouterLink :to="{ name: 'about' }">ÜBER MICH</RouterLink>
+    <RouterLink :to="{ name: 'experience' }">LAUFBAHN</RouterLink>
+    <RouterLink :to="{ name: 'projects' }">PROJEKTE</RouterLink>
+    <RouterLink :to="{ name: 'contact' }">KONTAKT</RouterLink>
   </nav>
 </template>
 
@@ -13,18 +13,21 @@
 nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 a {
   color: var(--color-text);
   text-decoration: none;
   display: flex;
-  font-weight: 500;
+  font-weight: 400;
   max-width: 218px;
+  font-size: 1.125rem;
+  opacity: 0.8;
 }
 a:hover {
   transition: color 0.3s;
   color: white;
+  opacity: 1;
 }
 a::before {
   content: '';
@@ -34,18 +37,20 @@ a::before {
   border-radius: 2rem;
   margin: auto 0.5rem auto 0;
   transition: all 0.3s ease;
+  opacity: 1;
 }
 a:hover::before,
 .router-link-active::before {
   content: '';
   border-radius: 0;
   background-color: white;
-  height: 0.2rem;
+  height: 1px;
   width: 5rem;
   margin-right: 0.5rem;
 }
 .router-link-active {
-  font-weight: 700;
+  font-weight: 800;
   color: white;
+  opacity: 1;
 }
 </style>

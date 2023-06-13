@@ -4,13 +4,15 @@ import SideNavigation from './components/SideNavigation.vue'
 import IntroductionBlock from './components/IntroductionBlock.vue'
 import { me } from '@/content'
 import FlashlightEffect from '@/components/FlashlightEffect.vue'
+import SeperationLine from '@/components/SeperationLine.vue'
 </script>
 
 <template>
   <div id="app-content">
     <flashlight-effect />
     <div class="l-wrapper">
-      <IntroductionBlock :title="me.title" :work-at="me.workAt" :quote="me.quote" />
+      <IntroductionBlock :title="me.title" :work-at="me.workAt" />
+      <seperation-line color="var(--accent)" h="5px" w="3rem" class="line" />
       <SideNavigation></SideNavigation>
     </div>
     <div class="r-wrapper">
@@ -34,6 +36,9 @@ import FlashlightEffect from '@/components/FlashlightEffect.vue'
   top: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+}
+.line {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 </style>

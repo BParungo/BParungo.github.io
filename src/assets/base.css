@@ -1,6 +1,6 @@
 
 :root {
-  --accent:#2720C8;
+  --accent:39,32,200;
   --color-background:#121b34;
   --color-text:#e3f6ffd6;
   --accent2:0, 90, 57;
@@ -33,8 +33,8 @@ h1{
   font-size: 2.6rem;
 }
 h2{
-  font-weight: 200;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
   white-space: pre-line;
 }
 h3{

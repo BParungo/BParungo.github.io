@@ -21,8 +21,7 @@ function goToDetails(skill: skillItem) {
 </script>
 
 <template>
-  <p>Skillset</p>
-  <separation-line h="5px" color="var(--accent)" />
+  <separation-line h="5px" color="rgb(var(--accent))" />
   <div class="transition-container">
     <transition name="rotate">
       <div class="icon-container" v-if="currentCard === card.overview">
@@ -47,7 +46,7 @@ function goToDetails(skill: skillItem) {
       </div>
     </transition>
   </div>
-  <separation-line h="5px" color="var(--accent)" />
+  <separation-line h="5px" color="rgb(var(--accent))" />
 </template>
 
 <style scoped>
