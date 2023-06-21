@@ -2,10 +2,7 @@
 defineProps<{
   h: string
   color: string
-  w?: {
-    type: string
-    default: 'auto'
-  }
+  w?: 'auto' | string
 }>()
 </script>
 
