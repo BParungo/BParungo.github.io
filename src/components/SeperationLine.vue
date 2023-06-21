@@ -3,6 +3,7 @@ defineProps<{
   h: string
   color: string
   w?: {
+    type: string
     default: 'auto'
   }
 }>()

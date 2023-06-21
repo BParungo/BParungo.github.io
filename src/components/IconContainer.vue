@@ -4,7 +4,8 @@ import { ref } from 'vue'
 import { skills } from '@/content'
 import type { skillItem } from '@/content'
 import ExternalLink from '@/components/ExternalLink.vue'
-import SeparationLine from '@/components/SeperationLine.vue'
+import BackButton from '@/components/BackButton.vue'
+import RowEntry from '@/components/RowEntry.vue'
 
 enum card {
   overview = 1,
@@ -21,7 +22,6 @@ function goToDetails(skill: skillItem) {
 </script>
 
 <template>
-  <separation-line h="5px" color="rgb(var(--accent))" />
   <div class="transition-container">
     <transition name="rotate">
       <div class="icon-container" v-if="currentCard === card.overview">
@@ -32,21 +32,21 @@ function goToDetails(skill: skillItem) {
           :key="skill.name"
         />
       </div>
-      <div
-        class="icon-detail"
-        v-else-if="currentCard === card.detail"
-        @click="currentCard = card.overview"
-      >
-        <Icon :path="selectedSkillPath" />
-        <h2>{{ selectedSkillDetails.name }}</h2>
-        <p>{{ selectedSkillDetails.description }}</p>
-        <external-link v-if="selectedSkillDetails.href" :href="selectedSkillDetails.href">
-          Link to {{ selectedSkillDetails.name }}
-        </external-link>
+      <div class="icon-detail" v-else-if="currentCard === card.detail">
+        <div class="details-title" @click="currentCard = card.overview">
+          <back-button />
+          <h3>{{ selectedSkillDetails.name }}</h3>
+          <Icon :path="selectedSkillPath" />
+        </div>
+        <RowEntry class="details-text">
+          <p>{{ selectedSkillDetails.description }}</p>
+          <external-link v-if="selectedSkillDetails.href" :href="selectedSkillDetails.href">
+            Mehr zu {{ selectedSkillDetails.name }}
+          </external-link>
+        </RowEntry>
       </div>
     </transition>
   </div>
-  <separation-line h="5px" color="rgb(var(--accent))" />
 </template>
 
 <style scoped>
@@ -54,15 +54,29 @@ p {
   width: 100%;
 }
 .icon-container {
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+}
+.details-title {
+  display: flex;
+}
+.details-title h3 {
+  margin: auto;
+}
+.details-text {
+  display: block;
+  padding: 2rem;
+}
+.details-text p {
+  margin-bottom: 1rem;
 }
 .transition-container {
   overflow: hidden;
   position: relative;
   perspective: 1200px;
+  min-height: 600px;
 }
 .rotate-enter-active,
 .rotate-leave-active {

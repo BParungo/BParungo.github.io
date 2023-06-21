@@ -5,6 +5,10 @@ import IntroductionBlock from './components/IntroductionBlock.vue'
 import { me } from '@/content'
 import FlashlightEffect from '@/components/FlashlightEffect.vue'
 import SeperationLine from '@/components/SeperationLine.vue'
+import AboutView from '@/views/AboutView.vue'
+import ExperienceView from '@/views/ExperienceView.vue'
+import ProjectsView from '@/views/ProjectsView.vue'
+import ContactView from '@/views/ContactView.vue'
 </script>
 
 <template>
@@ -12,33 +16,68 @@ import SeperationLine from '@/components/SeperationLine.vue'
     <flashlight-effect />
     <div class="l-wrapper">
       <IntroductionBlock :title="me.title" :work-at="me.workAt" />
-      <seperation-line color="var(--accent)" h="5px" w="3rem" class="line" />
-      <SideNavigation></SideNavigation>
+      <seperation-line color="rgb(var(--accent))" h="5px" w="3rem" class="line" />
+      <SideNavigation class="desktop-nav"></SideNavigation>
     </div>
-    <div class="r-wrapper">
+    <div class="r-wrapper desktop-nav">
       <RouterView />
+    </div>
+    <div class="r-wrapper mobile-nav">
+      <AboutView />
+      <ExperienceView />
+      <ProjectsView />
+      <ContactView />
     </div>
   </div>
 </template>
 
 <style scoped>
 #app-content {
-  max-width: 1268px;
   margin: 0 auto;
-  padding: 6rem 2rem;
   display: grid;
-  gap: 3rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 100vw;
 }
 .l-wrapper {
-  position: sticky;
-  height: 60vh;
-  top: 6rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+}
+.r-wrapper {
+  padding: 1rem;
 }
 .line {
   margin-top: 1rem;
   margin-bottom: 4rem;
+}
+.desktop-nav {
+  display: none;
+}
+.mobile-nav {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  #app-content {
+    max-width: 1268px;
+    padding: 6rem 2rem;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .l-wrapper {
+    top: 6rem;
+    position: sticky;
+    height: 70vh;
+  }
+  .desktop-nav {
+    display: block;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #app-content {
+    gap: 3rem;
+  }
 }
 </style>

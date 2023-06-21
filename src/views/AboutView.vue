@@ -2,33 +2,34 @@
 import IconContainer from '@/components/IconContainer.vue'
 import { me } from '@/content'
 import SeperationLine from '@/components/SeperationLine.vue'
+import RowEntry from '@/components/RowEntry.vue'
 </script>
 <template>
   <div class="me-container">
-    <div class="card">
+    <RowEntry>
       <div>
         <h2>{{ me.hello }}</h2>
         <p>{{ me.introduction }}</p>
       </div>
-      <img src="img/Logo.svg" alt="BParungo-Image" />
-    </div>
+      <img class="right" :src="'img/Logo.svg'" alt="BParungo-Image" />
+    </RowEntry>
     <seperation-line color="rgb(var(--accent))" h="1px" />
-    <div class="card">
+    <RowEntry>
+      <img class="right" :src="'img/frontendIcon.svg'" alt="frontend-icon" />
+      <p>{{ me.frontendText }}</p>
+    </RowEntry>
+    <RowEntry>
+      <p>{{ me.uxText }}</p>
+      <img class="left" :src="'img/designIcon.svg'" alt="design-icon" />
+    </RowEntry>
+    <seperation-line color="rgb(var(--accent))" h="1px" />
+    <RowEntry>
       <div>
-        <span>{{ me.frontendText }}</span>
+        <p>{{ me.text }}</p>
       </div>
-    </div>
-    <div class="card">
-      <div>
-        <span>{{ me.uxText }}</span>
-      </div>
-    </div>
-    <div class="card">
-      <div>
-        <span>{{ me.text }}</span>
-      </div>
-    </div>
-    <IconContainer class="icon-container"></IconContainer>
+    </RowEntry>
+    <IconContainer></IconContainer>
+    <seperation-line color="rgb(var(--accent))" h="1px" />
   </div>
 </template>
 
@@ -46,20 +47,17 @@ h2::first-letter {
   font-size: 2rem;
 }
 img {
-  float: right;
-  height: 9rem;
+  height: 6rem;
+  width: 6rem;
   margin: auto;
+}
+.left {
+  margin-left: 0;
+}
+.right {
+  margin-right: 0;
 }
 p {
   word-break: break-word;
-}
-.card {
-  padding: 1rem;
-  display: flex;
-  border-radius: 4px;
-  transition: background-color 0.33s ease-in-out;
-}
-.card:hover {
-  background: rgba(255, 255, 255, 0.05);
 }
 </style>

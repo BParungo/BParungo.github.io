@@ -1,2 +1,3 @@
 @import 'base.css';
-@import "fontFace.css";
+@import 'fontFace.css';
+@import 'mediaQueries.css';
