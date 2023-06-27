@@ -4,11 +4,11 @@ import SideNavigation from './components/SideNavigation.vue'
 import IntroductionBlock from './components/IntroductionBlock.vue'
 import { me } from '@/content'
 import FlashlightEffect from '@/components/FlashlightEffect.vue'
-import SeperationLine from '@/components/SeperationLine.vue'
+import SeparationLine from '@/components/SeperationLine.vue'
 import AboutView from '@/views/AboutView.vue'
 import ExperienceView from '@/views/ExperienceView.vue'
 import ProjectsView from '@/views/ProjectsView.vue'
-import ContactView from '@/views/ContactView.vue'
+import ContactIcons from '@/components/ContactIcons.vue'
 </script>
 
 <template>
@@ -16,8 +16,9 @@ import ContactView from '@/views/ContactView.vue'
     <flashlight-effect />
     <div class="l-wrapper">
       <IntroductionBlock :title="me.title" :work-at="me.workAt" />
-      <seperation-line color="rgb(var(--accent))" h="5px" w="3rem" class="line" />
+      <separation-line color="rgb(var(--accent))" h="5px" w="3rem" class="line" />
       <SideNavigation class="desktop-nav"></SideNavigation>
+      <ContactIcons></ContactIcons>
     </div>
     <div class="r-wrapper desktop-nav">
       <RouterView />
@@ -26,13 +27,13 @@ import ContactView from '@/views/ContactView.vue'
       <AboutView />
       <ExperienceView />
       <ProjectsView />
-      <ContactView />
     </div>
   </div>
 </template>
 
 <style scoped>
 #app-content {
+  min-height: 100vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 100vw;
@@ -41,8 +42,10 @@ import ContactView from '@/views/ContactView.vue'
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
 }
 .r-wrapper {
+  margin-top: 6rem;
   padding: 1rem;
 }
 .line {
@@ -58,14 +61,15 @@ import ContactView from '@/views/ContactView.vue'
 @media only screen and (min-width: 768px) {
   #app-content {
     max-width: 1268px;
-    padding: 6rem 2rem;
+    padding: 0 2rem;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
   }
   .l-wrapper {
     top: 6rem;
     position: sticky;
-    height: 70vh;
+    height: calc(100vh - 6rem);
+    background: transparent;
   }
   .desktop-nav {
     display: block;
