@@ -21,7 +21,12 @@ import ContactIcons from '@/components/ContactIcons.vue'
       <ContactIcons></ContactIcons>
     </div>
     <div class="r-wrapper desktop-nav">
-      <RouterView />
+      <RouterView v-slot="{ Component }">
+        <!-- Use any custom transition and  to `fade` -->
+        <transition name="slide" mode="out-in" appear>
+          <component :is="Component" />
+        </transition>
+      </RouterView>
     </div>
     <div class="r-wrapper mobile-nav">
       <AboutView />
@@ -82,6 +87,22 @@ import ContactIcons from '@/components/ContactIcons.vue'
 @media only screen and (min-width: 1000px) {
   #app-content {
     gap: 3rem;
+  }
+}
+
+.slide-enter-active {
+  animation: slide 0.5s;
+}
+.slide-leave-active {
+  animation: slide 0.5s ease-in-out reverse;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 </style>

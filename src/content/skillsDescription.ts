@@ -158,14 +158,3 @@ export type skillItem = {
   description: string
   href?: string
 }
-export function getSkillsDescription(iconPath: string) {
-  return skills.find((skill) => skill.filePath === getName(iconPath))
-}
-
-function getName(path: string) {
-  const startCharVal = '/'
-  const endCharVal = '.'
-  const startIndex = path.indexOf(startCharVal) + 1
-  const endIndex = path.indexOf(endCharVal, startIndex)
-  return path.slice(startIndex, endIndex)
-}
