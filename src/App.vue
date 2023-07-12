@@ -30,7 +30,7 @@ import ContactIcons from '@/components/ContactIcons.vue'
     <div class="r-wrapper mobile-nav">
       <AboutView />
       <ExperienceView />
-      <ProjectsView />
+      <!--ProjectsView /-->
     </div>
   </div>
 </template>

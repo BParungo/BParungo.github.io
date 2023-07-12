@@ -3,7 +3,7 @@
 <template>
   <nav>
     <RouterLink :to="{ name: 'about' }">ÜBER MICH</RouterLink>
-    <RouterLink :to="{ name: 'experience' }">LAUFBAHN</RouterLink>
+    <RouterLink :to="{ name: 'experience' }">ERFAHRUNG</RouterLink>
     <!--RouterLink :to="{ name: 'projects' }">PROJEKTE</RouterLink-->
   </nav>
 </template>

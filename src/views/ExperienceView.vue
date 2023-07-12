@@ -14,10 +14,12 @@ import TechChip from '@/components/TechChip.vue'
         Leidenschaft ist. Stattdessen entdeckte ich meine Begeisterung für das Programmieren und das
         Erschaffen eigener kreativer Projekte. Um meine Karriere als kreativer Developer zu
         beginnen, holte ich mein Fachabitur nach und begann ein Studium. Seitdem entwickle ich meine
-        Fähigkeiten kontinuierlich weiter und bin motiviert, innovative Softwareanwendungen zu
+        Fähigkeiten kontinuierlich weiter und bin motiviert innovative Softwareanwendungen zu
         gestalten und mich in spannende Projekte einzubringen.
       </p>
-      <ExternalLink :href="'/Lebenslauf Blaine Parungo.pdf'">Lebenslauf Downloaden</ExternalLink>
+      <ExternalLink :href="'/Lebenslauf Web Blaine Parungo.pdf'" class="download-btn"
+        >Lebenslauf Downloaden</ExternalLink
+      >
     </RowEntry>
     <div class="entries">
       <RowEntry v-for="item in experience" :key="item.company">
@@ -66,7 +68,13 @@ import TechChip from '@/components/TechChip.vue'
 h2 {
   margin: 1rem 0;
 }
+.download-btn {
+  margin: auto;
+}
 @media only screen and (min-width: 768px) {
+  .download-btn {
+    margin: auto auto auto 1rem;
+  }
   .entry {
     display: grid;
     grid-template-columns: 10rem auto;
