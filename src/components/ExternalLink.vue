@@ -1,24 +1,24 @@
 <script setup lang="ts">
-  defineProps<{
-    href : string
-  }>()
+defineProps<{
+  href?: string
+}>()
 </script>
 
 <template>
-  <a :href="href"><slot/></a>
+  <a :href="href"><slot /></a>
 </template>
 
 <style scoped>
-a{
+a {
   text-decoration: none;
   font-weight: 600;
   color: var(--accent3);
   position: relative;
-  padding: 0 .5rem ;
+  padding: 0 0.5rem;
 }
-a:before{
+a:before {
   background: var(--color-text);
-  content: "";
+  content: '';
   inset: 0;
   position: absolute;
   transform: scaleX(0);

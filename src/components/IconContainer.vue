@@ -14,9 +14,9 @@ enum card {
 const currentCard = ref(card.overview)
 const selectedSkillDetails = ref<skillItem>({} as skillItem)
 const selectedSkillPath = ref('')
-function goToDetails(skill: skillItem) {
-  selectedSkillDetails.value = skill
-  selectedSkillPath.value = skill.filePath
+function goToDetails(data: skillItem) {
+  selectedSkillDetails.value = data
+  selectedSkillPath.value = data.skill.filePath
   currentCard.value = card.detail
 }
 </script>
@@ -26,22 +26,22 @@ function goToDetails(skill: skillItem) {
     <transition name="rotate">
       <div class="icon-container" v-if="currentCard === card.overview">
         <Icon
-          v-for="skill in skills"
-          :path="skill.filePath"
-          @click="goToDetails(skill)"
-          :key="skill.name"
+          v-for="item in skills"
+          :path="item.skill.filePath"
+          @click="goToDetails(item)"
+          :key="item.skill.name"
         />
       </div>
       <div class="icon-detail" v-else-if="currentCard === card.detail">
         <div class="details-title" @click="currentCard = card.overview">
           <back-button />
-          <h3>{{ selectedSkillDetails.name }}</h3>
+          <h3>{{ selectedSkillDetails.skill.name }}</h3>
           <Icon :path="selectedSkillPath" />
         </div>
         <RowEntry class="details-text">
           <p>{{ selectedSkillDetails.description }}</p>
           <external-link v-if="selectedSkillDetails.href" :href="selectedSkillDetails.href">
-            Mehr zu {{ selectedSkillDetails.name }}
+            Mehr zu {{ selectedSkillDetails.skill.name }}
           </external-link>
         </RowEntry>
       </div>

@@ -22,7 +22,6 @@ import ContactIcons from '@/components/ContactIcons.vue'
     </div>
     <div class="r-wrapper desktop-nav">
       <RouterView v-slot="{ Component }">
-        <!-- Use any custom transition and  to `fade` -->
         <transition name="slide" mode="out-in" appear>
           <component :is="Component" />
         </transition>
@@ -65,7 +64,7 @@ import ContactIcons from '@/components/ContactIcons.vue'
 }
 @media only screen and (min-width: 768px) {
   #app-content {
-    max-width: 1268px;
+    max-width: 1368px;
     padding: 0 2rem;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;

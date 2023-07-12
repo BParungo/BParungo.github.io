@@ -1,8 +1,8 @@
 
 :root {
-  --accent:39,32,200;
   --color-background:#121b34;
   --color-text:#e3f6ffd6;
+  --accent:0,222,159;
   --accent2:0, 90, 57;
   --accent3:#009268;
 }
@@ -42,3 +42,9 @@ h3{
   font-weight: 600;
   font-size: 1.4rem;
 }
+h4{
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+
