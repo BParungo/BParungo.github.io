@@ -1,0 +1,1 @@
+import{_ as o,c as t,a as r,o as s}from"./index-afoUcuKp.js";const c={};function a(n,e){return s(),t("div",null,e[0]||(e[0]=[r("h1",null,"Projects View",-1)]))}const _=o(c,[["render",a],["__scopeId","data-v-d8877d73"]]);export{_ as default};
