@@ -18,7 +18,7 @@ import TechChip from '@/components/TechChip.vue'
         gestalten und mich in spannende Projekte einzubringen.
       </p>
       <ExternalLink :href="'/Lebenslauf Web Blaine Parungo.pdf'" class="download-btn"
-        >Lebenslauf Downloaden</ExternalLink
+        >Lebenslauf als PDF</ExternalLink
       >
     </RowEntry>
     <div class="entries">
@@ -56,6 +56,7 @@ import TechChip from '@/components/TechChip.vue'
 }
 .experience-content p {
   margin-top: 1rem;
+  white-space: pre-wrap;
 }
 .tech-container {
   display: flex;

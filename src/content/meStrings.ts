@@ -1,5 +1,5 @@
 export const me = {
-  title: 'Frontend-Entwickler \n & UX/UI-Designer',
+  title: 'Frontend-Entwickler',
   workAt: 'bei mwb fairtrade Wertpapierhandelsbank AG',
   hello: 'Moin,',
   introduction:

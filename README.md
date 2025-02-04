@@ -1,46 +1,40 @@
-# portfolio
+# Blaine Parungo - Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+## Projektbeschreibung
 
-## Recommended IDE Setup
+Willkommen zu meinem Portfolio-Projekt! Dieses Projekt stellt meine Fähigkeiten und Erfahrungen als Frontend-Entwickler und UX/UI-Designer vor. Es zeigt eine Auswahl meiner Arbeiten und Projekte, die ich im Laufe meiner Karriere entwickelt habe.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Hauptfunktionen
 
-## Type Support for `.vue` Imports in TS
+- **Über mich**: Eine kurze Einführung zu meiner Person, meinen beruflichen Werdegang und meine Leidenschaft für die Entwicklung ansprechender Benutzeroberflächen.
+- **Fähigkeiten**: Eine Liste der Technologien und Tools, die ich beherrsche.
+- **Kontakt**: Informationen, wie man mich erreichen kann, einschließlich Links zu meinen sozialen Medien und meinem GitHub-Profil.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Technologien
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Dieses Portfolio wurde mit den folgenden Technologien entwickelt:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- **Vue.js**: Für die Entwicklung der Benutzeroberfläche.
+- **TypeScript**: Für die Typisierung und Verbesserung des JavaScript-Codes.
+- **GitHub Pages**: Für das Hosting und die Bereitstellung der Website.
 
-## Customize configuration
+## Nutzung
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Ihr könnt gerne das Projekt clonen oder Code-Teile davon nutzen. Hier sind die Schritte, um das Projekt lokal auszuführen:
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+1. **Repository klonen**:
+   ```bash
+   git clone https://github.com/BParungo/BParungo.github.io.git
+   ```
+2. **In das Projektverzeichnis wechseln**:
+   ```bash
+   cd BParungo.github.io
+   ```
+3. **Abhängigkeiten installieren**:
+   ```bash
+   npm install
+   ```
+4. **Entwicklungsserver starten**:
+   ```bash
+   npm run dev
+   ```
